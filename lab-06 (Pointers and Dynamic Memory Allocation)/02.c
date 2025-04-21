@@ -12,23 +12,19 @@ char *getName(void);
 int main(int argc, char const *argv[])
 {
     char **members = malloc(MEMBERS_SIZE * sizeof(char *));
-    int i;
 
-    for (i = 0; i < MEMBERS_SIZE; i++)
-    {
+    for (int i = 0; i < MEMBERS_SIZE; i++) {
         printf("Enter name:\n");
         members[i] = getName();
     }
 
-    for (i = 0; i < MEMBERS_SIZE; i++)
+    for (int i = 0; i < MEMBERS_SIZE; i++)
         printf("Member: %s\n", members[i]);
 
     return 0;
 }
 
-char *getName()
-{
+char *getName() {
     scanf("%s", buffer);
-    char *name = malloc(strlen(buffer) * sizeof(char));
-    return strcpy(name, buffer);
+    return strcpy((char *) malloc(strlen(buffer)), buffer);
 }

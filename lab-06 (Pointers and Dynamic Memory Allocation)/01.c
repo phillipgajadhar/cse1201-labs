@@ -11,11 +11,8 @@ int main(int argc, char const *argv[])
 
     int *copy = copyArray(source, SIZE);
 
-    int i;
-
-    for (i = 0; i < SIZE; i++)
+    for (int i = 0; i < SIZE; i++)
         printf("%d ", copy[i]);
-    
 
     return 0;
 }
@@ -23,9 +20,8 @@ int main(int argc, char const *argv[])
 int *copyArray(int *source, int size)
 {
     int *dest = (int*) malloc(size * sizeof(int));
-    int i;
 
-    for (i = 0; i < size; i++)
+    for (int i = 0; i < size; i++)
         dest[i] = source[i];
         
     return dest;

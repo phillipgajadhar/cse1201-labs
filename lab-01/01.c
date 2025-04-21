@@ -2,24 +2,20 @@
 
 int main()
 {
-    int num1, num2, sum, difference, product;
+    int num1, num2;
+    int sum, difference, product;
     float quotient;
 
-    printf("Enter first number:\n");
-    scanf("%d", &num1);
-
-    printf("Enter second number:\n");
-    scanf("%d", &num2);
+    printf("Enter two numbers:\n");
+    scanf("%d %d", &num1, &num2);
 
     sum = num1 + num2;
     difference = num1 - num2;
     product = num1 * num2;
-    quotient = (float) num1 / num2;
+    quotient = (float)num1 / num2;
 
-    printf("Sum: %d\n", sum);
-    printf("Difference: %d\n", difference);
-    printf("Product: %d\n", product);
-    printf("Quotient: %f\n", quotient);
+    printf("Sum: %d\nDifference: %d\nProduct: %d\nQuotient: %.2f\n",
+           sum, difference, product, quotient);
 
     return 0;
 }

@@ -1,9 +1,16 @@
 #include <stdio.h>
 
-// function prototypes
-float circleArea(float radius);
-float rectangleArea(float length, float width);
-float triangleArea(float base, float height);
+float circleArea(float radius) {
+    return 22 / 7 * (radius * radius);
+}
+
+float rectangleArea(float length, float width) {
+    return length * width;
+}
+
+float triangleArea(float base, float height) {
+    return 0.5 * base * height;
+}
 
 int main()
 {
@@ -19,19 +26,4 @@ int main()
     printf("The area of triangle: %f\n", triangleArea(2, 8));
 
     return 0;
-}
-
-float circleArea(float radius)
-{
-    return 22 / 7 * (radius * radius);
-}
-
-float rectangleArea(float length, float width)
-{
-    return length * width;
-}
-
-float triangleArea(float base, float height)
-{
-    return  0.5 * base * height;
 }

@@ -1,10 +1,14 @@
 #include <stdio.h>
 
-int isOdd(int);
-int intEven(int);
+int isOdd(int x) {
+    return x % 2 == 1;
+}
 
-int main()
-{
+int isEven(int x) {
+    return !isOdd(x);
+}
+
+int main() {
     int num;
 
     printf("Enter number: \n");
@@ -12,19 +16,8 @@ int main()
 
     if (isOdd(num))
         printf("%d is odd\n", num);
-
     else
         printf("%d is even\n", num);
 
     return 0;
-}
-
-int isOdd(int x)
-{
-    return x % 2 == 1;
-}
-
-int isEven(int x)
-{
-    return !isOdd(x);
 }
