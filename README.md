@@ -7,3 +7,4 @@
 - lab-05 (Pointers and Pointer Arithmetic)
 - lab-06 (Pointers and Dynamic Memory Allocation)
 - lab (Macros)
+- lab (Technical Documentation)
